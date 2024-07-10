@@ -100,11 +100,11 @@ public:
         }
         for (i = 0; i < n; i++){
 
-            if (i == n-1){
+            if (i == n-1){                    // when hitting the last char (n-1) in the string the loop breaks.
                 break;
             }
-            else if (arr[i] < arr[i+1]){
-                sub = arr[i+1] - arr[i];
+            else if (arr[i] < arr[i+1]){      // absolute value calculation
+                sub = arr[i+1] - arr[i];      // ex: normally 1-2 = -1, it swaps the bigger num to the left, 2-1 = 1, so we get |1-2| = 1
                 add += sub;
             }
             else{
