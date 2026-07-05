@@ -1,6 +1,24 @@
+# Time complexity: O(n log n)
 class Solution:
     def sortedSquares(self, nums: List[int]) -> List[int]:
         for i in range(len(nums)):
             nums[i] **= 2
         nums.sort()
         return nums
+
+
+
+# Time complexity: O(n)
+class Solution:
+    def sortedSquares(self, nums: List[int]) -> List[int]:
+        size = len(nums)
+        newArr = [0] * size
+        left, right = 0, size - 1
+        for i in reversed(range(size)):
+            if nums[left] ** 2 > nums[right] ** 2:
+                newArr[i] = nums[left] ** 2
+                left += 1
+            else:
+                newArr[i] = nums[right] ** 2
+                right -= 1
+        return newArr
