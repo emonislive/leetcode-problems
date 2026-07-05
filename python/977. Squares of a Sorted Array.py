@@ -1,4 +1,5 @@
 # Time complexity: O(n log n)
+# Space complexity: O(1)
 class Solution:
     def sortedSquares(self, nums: List[int]) -> List[int]:
         for i in range(len(nums)):
@@ -9,6 +10,7 @@ class Solution:
 
 
 # Time complexity: O(n)
+# Space complexity: O(n)
 class Solution:
     def sortedSquares(self, nums: List[int]) -> List[int]:
         size = len(nums)
